@@ -21,9 +21,9 @@ export const HomeImage = tw.div`
     items-center
     w-full
 
-
     sm:(w-[70%])
     md:(w-[60%])
+    lg:(w-full)
 
 `;
 

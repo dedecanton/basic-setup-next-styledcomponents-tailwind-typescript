@@ -4,7 +4,7 @@ import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import Header from "../components/Header";
 import HomeSection from '../components/HomeSection';
-
+import FeaturesSection from '../components/FeaturesSection';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     </Head>
       <Header/>
       <HomeSection/>
-
+      <FeaturesSection/>
     </>
   );
 }

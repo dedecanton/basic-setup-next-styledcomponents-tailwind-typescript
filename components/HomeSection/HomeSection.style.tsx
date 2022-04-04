@@ -1,19 +1,16 @@
 import tw from "twin.macro";
+import { StyledContainer } from "../GlobalStyles/StyledContainer";
 
-export const Container = tw.div`
-    max-w-[1440px]
-    mx-auto
 
-    flex
+export const Container = tw(StyledContainer)`
+    pt-8
     flex-col
     justify-between
-    items-center
 
     px-0.5
     my-[5rem]
     md:(w-[95%])
     lg:(px-[2rem] flex-row-reverse)
-        
 `;
 export const HomeImage = tw.div`
     flex

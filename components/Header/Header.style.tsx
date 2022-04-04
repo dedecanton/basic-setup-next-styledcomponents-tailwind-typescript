@@ -1,20 +1,29 @@
-import tw, { styled } from "twin.macro";
+import tw from "twin.macro";
+import styled from "styled-components";
 
+import { StyledContainer } from "../GlobalStyles/StyledContainer";
+
+export const Container = tw(StyledContainer)`
+  justify-between
+  w-full
+   max-w-[1440px]
+`;
 
 export const Navbar = tw.nav`
-    flex
-    justify-between
-    items-center
-    flex-wrap
-    bg-white
-    pt-[1rem]
-    px-[2rem]
-    max-w-[1440px]
+  fixed
+  top-0
+  left-0
+  w-full
+  z-40
+  flex
+  justify-center
+  items-center
+  flex-wrap
+  bg-white
+  px-[2rem]
+   
     mx-auto
-    mt-6
-
-    md:mt-4
-    
+    py-6
 `;
 
 export const StyledMenuIcon = tw.div`
@@ -25,11 +34,12 @@ export const StyledMenuIcon = tw.div`
 `;
 
 interface MenuProps {
-  menuIsOpen?: string;
+  menuIsOpen: boolean;
 }
 
 export const Menu = styled.div(({ menuIsOpen }: MenuProps) => [
   tw`
+    z-40
     flex
     flex-col
     overflow-hidden
@@ -89,4 +99,5 @@ export const Social = tw.div`
     svg:text-4xl
     svg:mx-5
 
+    md:display[none]
 `;

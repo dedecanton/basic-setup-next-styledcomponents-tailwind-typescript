@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { Navbar, Menu, MenuLink, MenuButton, Social,StyledMenuIcon } from "./Header.style";
+import { Navbar, Menu, MenuLink, MenuButton, Social,StyledMenuIcon, Container } from "./Header.style";
 import { MenuIcon } from "@heroicons/react/outline";
 import { XIcon } from "@heroicons/react/outline";
 import LogoBookmark from "./logo-bookmark.svg";
@@ -15,6 +15,7 @@ const Header = () => {
 
   return (
     <Navbar>
+      <Container>
         {menuIsOpen ? (
             <Image className='z-50' src={LogoBookmarkWhite}  alt='logo bookmark'></Image>
             ):
@@ -28,7 +29,7 @@ const Header = () => {
       <Menu
         menuIsOpen={menuIsOpen}
       >
-        <MenuLink onClick={handleCloseMenu} href="#">
+        <MenuLink  onClick={handleCloseMenu} href="#">
           Features
         </MenuLink>
         <MenuLink onClick={handleCloseMenu} href="#">
@@ -50,6 +51,7 @@ const Header = () => {
           <AiOutlineTwitter />
         </Social>
       </Menu>
+      </Container>
     </Navbar>
   );
 };
